@@ -8,8 +8,7 @@ Reliable network implemented by udp socket.
 # client part
 congestion control에 두가지 정책이 있다.
 1. loss based
-slow start로 처음엔 가파른 상승세 -> ssthresh 지점 부터 AIMD로 정책 변경 -> 증가 둔해짐.
-이런 순서를 따르다가
+window 크기는 slow start 에서 ssthresh를 지나면 AIMD로 커지는 정책 변환.
 triple duplicate ack: window 크기 절반으로 줄임.
 timeout: window 크기 1로 줄임.
 2. delay based
