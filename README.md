@@ -9,8 +9,7 @@ Reliable network implemented by udp socket.
 congestion control에 두가지 정책이 있다.
 1. loss based
 window 크기는 slow start 에서 ssthresh를 지나면 AIMD로 커지는 정책 변환.
-triple duplicate ack: window 크기 절반으로 줄임.
-timeout: window 크기 1로 줄임.
+triple duplicate ack 는 window 크기 절반으로, timeout 은 window 크기 1로 줄임.
 2. delay based
 minimum rtt를 측정해 놓고, 이 값을 이번에 측정된 rtt로 나눈다.
 0.5 이하일 시 혼잡하다고 판단해서 window 크기를 줄인다.
